@@ -1,0 +1,50 @@
+﻿<Window x:Class="AddressBookW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AddressBookW"
+        mc:Ignorable="d"
+        Title="Адресная книга" Height="962" Width="1096" Icon="Images/Icon2.ico" Closing="Window_Closing">
+
+    <Grid Background="{DynamicResource MenuBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="116"/>
+            <RowDefinition Height="305*"/>
+        </Grid.RowDefinitions>
+        <ToolBar Margin="0,0,0.333,0">
+            <ToolBar.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFCAD2D6" Offset="0"/>
+                    <GradientStop Color="#FFFFFBFF" Offset="0.5"/>
+                    <GradientStop Color="#FFFFECEC" Offset="1"/>
+                </LinearGradientBrush>
+            </ToolBar.Background>
+            <Label Content="Управление адресной книгой:    " HorizontalAlignment="Left" VerticalAlignment ="Center" Style="{DynamicResource Labelstyle22m}"/>
+            <Separator/>
+            <Button Style="{DynamicResource ButtonPanelStyle}" Name="btnNewPerson" ToolTip="Создать данные о персоне." Click="BtnNewPerson_Click">
+                <Image Source="images/themes.png" Opacity="0.8" Stretch="Fill"/>
+            </Button>
+            <Button Style="{DynamicResource ButtonPanelStyle}" Name ="btnEdit" ToolTip="Редактировать данные." Click="BtnEdit_Click">
+                <Image Source="images/signup.png" Opacity="0.8" Stretch="Fill"/>
+            </Button>
+            <Button Style="{DynamicResource ButtonPanelStyle}" Name="btnRemove" ToolTip="Удалить выбранную запись. Внимание, персона будет удалена!" Click="BtnRemove_Click">
+                <Image Source="images/deletefile256.png" Opacity="0.8" Stretch="Fill"/>
+            </Button>
+            <Separator/>
+            <Button Style="{DynamicResource ButtonPanelStyle}" Name="btnExit" ToolTip="Выход из приложения." Click="BtnExit_Click">
+                <Image Source="images/off.png" Stretch="Fill" Opacity="0.5"/>
+            </Button>
+            <Separator/>
+        </ToolBar>
+        <DataGrid x:Name="dgAdressbook" RowHeight="100" IsReadOnly="True" Grid.Row="1" Style="{DynamicResource DataGridStyle}" AutoGeneratingColumn="DgAdressbook_AutoGeneratingColumn" Background="{DynamicResource PressedBorderBrush}" BorderBrush="{DynamicResource MenuBrush}"/>
+    </Grid>
+</Window>
