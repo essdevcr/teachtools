@@ -47,11 +47,6 @@ namespace AddressBookW
 
         private Binding BindDataPersons { get; set; }
         private BindingList<Person> BookPersons { get; set; }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            int c = 10 % 4;
-        }
-
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             Close();
