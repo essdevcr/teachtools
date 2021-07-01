@@ -47,7 +47,7 @@ namespace AddressBookW
                         if (!Helper.ValidValue.IsNamePerson(MidleName)) { error = "Не доспустимый состав символов в названии"; }
                         break;
                     case "Phone":
-                        if (!Helper.ValidValue.IsTelephone(Phone)) { error = "Не допустимый формат телефона. Нужен +7xxx-xxx-xx-xx"; }
+                        if (!Helper.ValidValue.IsTelephone(Phone)) { error = "Не допустимый формат телефона. Нужен +7-xxx-xxx-xx-xx"; }
                         break;
                 }
                 return error;
