@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <ID>1</ID>
+    <FirstName>Петров</FirstName>
+    <LastName>Игорь</LastName>
+    <MidleName>Романович</MidleName>
+  </Person>
+</ArrayOfPerson>

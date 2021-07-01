@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <ID>1</ID>
+    <FirstName>Иванов</FirstName>
+    <LastName>Иван</LastName>
+    <MidleName>Иванович</MidleName>
+    <Phone>+7-111-444-77-88</Phone>
+    <EMail>ndbd@mail.ru</EMail>
+    <Address>Адресок то липовый</Address>
+  </Person>
+  <Person>
+    <ID>2</ID>
+    <FirstName>Кимшмишмаш</FirstName>
+  </Person>
+</ArrayOfPerson>
