@@ -35,19 +35,19 @@ namespace AddressBookW
                 switch (columnName)
                 {
                     case "ID":
-                        if (ID < 0) { error = "ID должен быть больше 0 и меньше 100"; }
+                        if (ID < 0) { error = Helper.ErrorsMsg.NoSelectItem.ErrName; }
                         break;
                     case "FirstName":
-                        if (!Helper.ValidValue.IsNamePerson(FirstName)) { error = "Не доспустимый состав символов в названии"; }
+                        if (!Helper.ValidValue.IsNamePerson(FirstName)) { error = Helper.ErrorsMsg.NotAdmissibleSymbol.ErrName; }
                         break;
                     case "LastName":
-                        if (!Helper.ValidValue.IsNamePerson(LastName)) { error = "Не доспустимый состав символов в названии"; }
+                        if (!Helper.ValidValue.IsNamePerson(LastName)) { error = Helper.ErrorsMsg.NotAdmissibleSymbol.ErrName; }
                         break;
                     case "MidleName":
-                        if (!Helper.ValidValue.IsNamePerson(MidleName)) { error = "Не доспустимый состав символов в названии"; }
+                        if (!Helper.ValidValue.IsNamePerson(MidleName)) { error = Helper.ErrorsMsg.NotAdmissibleSymbol.ErrName; }
                         break;
                     case "Phone":
-                        if (!Helper.ValidValue.IsTelephone(Phone)) { error = "Не допустимый формат телефона. Нужен +7-xxx-xxx-xx-xx"; }
+                        if (!Helper.ValidValue.IsTelephone(Phone)) { error = Helper.ErrorsMsg.NotTelephoneFormat.ErrName; }
                         break;
                 }
                 return error;

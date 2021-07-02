@@ -25,13 +25,13 @@ namespace AddressBookW.Helper
             return false;
         }
 
-
-
-
     }
     public static class ErrorsMsg
     {
         public static ErrorMessage NoSelectItem { get { return new ErrorMessage("Не выбран элемент в списке", 101); } }
+        public static ErrorMessage IdOverRange { get { return new ErrorMessage("ID должен быть больше 0 и меньше 100", 102); } }
+        public static ErrorMessage NotAdmissibleSymbol { get { return new ErrorMessage("Не доспустимый состав символов в названии", 103); } }
+        public static ErrorMessage NotTelephoneFormat { get { return new ErrorMessage("Не допустимый формат телефона. Нужен +7-xxx-xxx-xx-xx", 104); } }
 
     }
     public class ErrorMessage
